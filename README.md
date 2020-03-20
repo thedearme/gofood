@@ -23,5 +23,3 @@ cd gofood
 php tembak.php
 
 
-
-untuk selengkapnya baca di https://www.kumpulanremaja.com/2019/11/cara-mendapatkan-voucher-go-food-gratis-gojek.html
