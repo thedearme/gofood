@@ -30,7 +30,7 @@ function change(){
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
         echo "\n".color("yellow","!] Klem COBAGORIDEPAY");
-        echo "\n".color("yellow","!] Please wait");
+        echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
@@ -43,7 +43,7 @@ function change(){
         }else{
         echo "\n".color("red","-] Message: ".$message);
         echo "\n".color("yellow","!] Klem COBAGOFOOD090320A");
-        echo "\n".color("yellow","!] Please wait");
+        echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(20);
@@ -57,7 +57,7 @@ function change(){
         }else{
         echo "\n".color("red","-] Message: ".$messagealt01);
         echo "\n".color("yellow","!] Klem KOROROSENSASIKAYA");
-        echo "\n".color("yellow","!] Please wait");
+        echo "\n".color("blue","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
@@ -71,7 +71,7 @@ function change(){
         }else{
         echo "\n".color("green","+] Message: ".$messagealt02);
         goride:
-        echo "\n".color("yellow","!] Klem COBAINGOJEK");
+        echo "\n".color("yellow","!] Klem CORONA");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -88,11 +88,11 @@ function change(){
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
         $voucher2 = getStr1('"title":"','",',$cekvoucher,"2");
         $voucher4 = getStr1('"title":"','",',$cekvoucher,"4");
-        echo "\n".color("yellow","!] Total voucher ".$total." : ");
-        echo color("green","1. ".$voucher1);
+        echo "\n".color("green","!] Total voucher ".$total." : ");
+        echo color("yellow","                         1. ".$voucher1);
         echo "\n".color("green","                     2. ".$voucher2);
-        echo "\n".color("green","                     3. ".$voucher3);
-        echo "\n".color("green","                     4. ".$voucher4);
+        echo "\n".color("blue","                     3. ".$voucher3);
+        echo "\n".color("red","                     4. ".$voucher4);
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
         $expired3 = getStr1('"expiry_date":"','"',$cekvoucher,'3');
