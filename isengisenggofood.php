@@ -1,12 +1,12 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("red","[]          ANGGA ROY S          []\n");
-echo color("green","[]     ISENG ISENG GOFOOD           []\n");
-echo color("red","[]      GOJEK PASTI ADA CUAN          []\n");
-echo color("green","[]            ###          []\n");
-echo color("yellow","[] Jam  : ".date('[d-m-Y] [H:i:s]')."  []\n");
-echo color("red","[] Nomor Pakai 62  []\n");
+echo color("red","   [•]          !ANGGA ROY S!              [•]\n");
+echo color("green"," [•]     !ISENG ISENG GOFOOD!            [•]\n");
+echo color("blue","  [•]     !GOJEK PASTI ADA CUAN!          [•]\n");
+echo color("green"," [•]            ###                      [•]\n");
+echo color("yellow","[•] Jam  : ".date('[d-m-Y] [H:i:s]')."  [•]\n");
+echo color("blue","  [•] Nomor Pakai 62  []\n");
 function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
