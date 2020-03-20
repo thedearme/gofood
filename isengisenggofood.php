@@ -4,7 +4,7 @@ include "function.php";
 echo color("red","[]          Edited          []\n");
 echo color("green","[]         A.G           []\n");
 echo color("yellow","[] NuyuL:  ".date('[d-m-Y] [H:i:s]')."  []\n");
-echo color("red","[]        TULIS NOMER PAKAI 62         []\n");
+echo color("blue","[]        TULIS NOMER PAKAI 62         []\n");
 function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
@@ -88,21 +88,33 @@ function change(){
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
         $voucher2 = getStr1('"title":"','",',$cekvoucher,"2");
         $voucher4 = getStr1('"title":"','",',$cekvoucher,"4");
-        echo "\n".color("green","!] Total voucher ".$total." : ");
-        echo color("yellow","                         1. ".$voucher1);
-        echo "\n".color("green","                     2. ".$voucher2);
-        echo "\n".color("blue","                     3. ".$voucher3);
-        echo "\n".color("red","                     4. ".$voucher4);
+        $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
+        $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
+        $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
+        $voucher8 = getStr1('"title":"','",',$cekvoucher,"8");
+        echo "\n".color("yellow","!] Total voucher ".$total." : ");
+        echo color("green","        1. ".$voucher1);
+        echo "\n".color("yellow","  2. ".$voucher2);
+        echo "\n".color("green","   3. ".$voucher3);
+        echo "\n".color("red","     4. ".$voucher4);
+        echo "\n".color("yellow","  5. ".$voucher6);
+        echo "\n".color("blue","    6. ".$voucher6);
+        echo "\n".color("red","     7. ".$voucher7);
+        echo "\n".color("green","   8. ".$voucher8);
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
         $expired3 = getStr1('"expiry_date":"','"',$cekvoucher,'3');
         $expired4 = getStr1('"expiry_date":"','"',$cekvoucher,'4');
+        $expired5 = getStr1('"expiry_date":"','"',$cekvoucher,'5');
+        $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
+        $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
+        $expired8 = getStr1('"expiry_date":"','"',$cekvoucher,'8');
          setpin:
          echo "\n".color("nevy","?] SET PIN SISAN ?: y/n ");
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("red","========( PIN MU = 112233 )========")."\n";
+         echo color("red","========( PIN MU = 190396 )========")."\n";
          $data2 = '{"pin":"190396"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "Otp pin: ";
