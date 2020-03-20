@@ -1,16 +1,17 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green","            Pasti Ada Cuan     \n");
-echo color("red","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
-echo color("yellow","[•]            #* --AnGGA ROy S-- *#           \n");
-echo color("blue","[•] Cara Nulis !! 62xxxxxxxxxx \n");
+echo color("green","                °GOJEK Pasti Ada Cuan°  [√]  \n");
+echo color("red","[√]  Time  : ".date('[d-m-Y] [H:i:s]')."  [√] \n");
+echo color("yellow","[√]              °•AnGGA ROy S--°      [√]    \n");
+echo color("blue","[√]                  °Doyan NuyuL°       [√]  \n");
+echo color("blue","[√] Cara Nulis !! 62xxxxxxxxxx \n");
 echo color("green","# # # --  IsengIsengGofood  --# # # \n");
 function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","(•) Nomor : ");
+        echo color("nevy","(~) Nomor : ");
         $no = trim(fgets(STDIN));
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
@@ -32,8 +33,8 @@ function change(){
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] Claim voc GORIDE 8K");
-        echo "\n".color("yellow","!] Please wait");
+        echo "\n".color("yellow","!] voc GORIDE 8K");
+        echo "\n".color("yellow","!] Enteni Sek ");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(3);
@@ -46,8 +47,8 @@ function change(){
         }else{
         echo "\n".color("red","-] Message: ".$message);
         gocar:
-        echo "\n".color("blue","!] Claim voc GOFOOD 15+10+5");
-        echo "\n".color("yellow","!] Please wait");
+        echo "\n".color("blue","!] voc GOFOOD 15+10+5");
+        echo "\n".color("yellow","!] Enteni Sek ");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(20);
@@ -70,8 +71,8 @@ function change(){
         echo "\n".color("red","-] Message: ".$message);
         }
         gofood:
-        echo "\n".color("green","!] Claim voc GOCAR pot 14K");
-        echo "\n".color("blue","!] Please wait");
+        echo "\n".color("green","!] Claim voc GOCAR 14K");
+        echo "\n".color("blue","!] Enteni Sek ");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(3);
@@ -107,9 +108,9 @@ function change(){
         $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
         $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
          setpin:
-         echo "\n".color("nevy","?] Mau set pin?: y/n ");
+         echo "\n".color("nevy","?] Sido Pasang pin?: yo/ora ");
          $pilih1 = trim(fgets(STDIN));
-         if($pilih1 == "y" || $pilih1 == "Y"){
+         if($pilih1 == "y" || $pilih1 == "YO"){
          //if($pilih1 == "y" && strpos($no, "628")){
          echo color("red","========( PIN ANDA = Tempikk.... )========")."\n";
          $data2 = '{"pin":"190396"}';
@@ -118,7 +119,7 @@ function change(){
          $otpsetpin = trim(fgets(STDIN));
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          echo $verifotpsetpin;
-         }else if($pilih1 == "n" || $pilih1 == "N"){
+         }else if($pilih1 == "n" || $pilih1 == "O"){
          die();
          }else{
          echo color("red","-] GAGAL!!!\n");
@@ -136,10 +137,10 @@ function change(){
          goto otp;
          }
          }else{
-         echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
-         echo "\nMau ulang? (y/n): ";
+         echo color("red","NOMOR WES KEREGIST/SALAH !!!");
+         echo "\nMau ulang? (yo/ora): ";
          $pilih = trim(fgets(STDIN));
-         if($pilih == "y" || $pilih == "Y"){
+         if($pilih == "y" || $pilih == "YO"){
          echo "\n==============Register==============\n";
          goto ulang;
          }else{
