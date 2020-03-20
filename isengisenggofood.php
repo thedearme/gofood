@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
+echo color("green","            Pasti Ada Cuan     \n");
 echo color("red","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
 echo color("yellow","[•]            #* --AnGGA ROy S-- *#           \n");
 echo color("blue","[•] Cara Nulis !! 62xxxxxxxxxx \n");
@@ -46,7 +46,7 @@ function change(){
         }else{
         echo "\n".color("red","-] Message: ".$message);
         gocar:
-        echo "\n".color("yellow","!] Claim voc GOFOOD 15+10+5");
+        echo "\n".color("blue","!] Claim voc GOFOOD 15+10+5");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -70,8 +70,8 @@ function change(){
         echo "\n".color("red","-] Message: ".$message);
         }
         gofood:
-        echo "\n".color("yellow","!] Claim voc GOCAR pot 14K");
-        echo "\n".color("yellow","!] Please wait");
+        echo "\n".color("green","!] Claim voc GOCAR pot 14K");
+        echo "\n".color("blue","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(3);
