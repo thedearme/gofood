@@ -2,10 +2,10 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
-echo color("yellow","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
-echo color("yellow","[•]              waiting proses.....           \n");
-echo color("yellow","[•] cara menulis nomor pakai 62xxxxxxxxxx \n");
-echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
+echo color("red","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
+echo color("yellow","[•]            #* --AnGGA ROy S-- *#           \n");
+echo color("blue","[•] Cara Nulis !! 62xxxxxxxxxx \n");
+echo color("green","# # # --  IsengIsengGofood  --# # # \n");
 function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
@@ -23,7 +23,7 @@ function change(){
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("green","+] Berhasil mendaftar");
+        echo color("green","+] Sukses.. mendaftar");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo "\n".color("yellow","+] Your access token : ".$token."\n\n");
@@ -90,26 +90,29 @@ function change(){
         $voucher4 = getStr1('"title":"','",',$cekvoucher,"4");
         $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
         $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
+        $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
         echo "\n".color("yellow","!] Total voucher ".$total." : ");
-        echo color("green","1. ".$voucher1);
-        echo "\n".color("green","                     2. ".$voucher2);
-        echo "\n".color("green","                     3. ".$voucher3);
+        echo color("blue","                         1. ".$voucher1);
+        echo "\n".color("red","                     2. ".$voucher2);
+        echo "\n".color("yellow","                     3. ".$voucher3);
         echo "\n".color("green","                     4. ".$voucher4);
-        echo "\n".color("green","                     5. ".$voucher5);
-        echo "\n".color("green","                     6. ".$voucher6);
+        echo "\n".color("red","                     5. ".$voucher5);
+        echo "\n".color("blue","                     6. ".$voucher6);
+        echo "\n".color("yellow","                     7. ".$voucher7);
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
         $expired3 = getStr1('"expiry_date":"','"',$cekvoucher,'3');
         $expired4 = getStr1('"expiry_date":"','"',$cekvoucher,'4');
         $expired5 = getStr1('"expiry_date":"','"',$cekvoucher,'5');
         $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
+        $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
          setpin:
          echo "\n".color("nevy","?] Mau set pin?: y/n ");
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("red","========( PIN ANDA = KEPO DEHH.... )========")."\n";
-         $data2 = '{"pin":"192211"}';
+         echo color("red","========( PIN ANDA = Tempikk.... )========")."\n";
+         $data2 = '{"pin":"190396"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "Otp set pin: ";
          $otpsetpin = trim(fgets(STDIN));
