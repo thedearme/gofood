@@ -46,9 +46,9 @@ function change(){
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(1);
+        sleep(20);
         }
-        sleep(10);
+        sleep(3);
         $alt01 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
         $messagealt01 = fetch_value($alt01,'"message":"','"');
         if(strpos($alt01, 'Promo kamu sudah bisa dipakai.')){
@@ -56,14 +56,14 @@ function change(){
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$messagealt01);
-        echo "\n".color("yellow","!] Klem AYOCOBAGOJEK");
+        echo "\n".color("yellow","!] Klem KOROROSENSASIKAYA");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
         }
         sleep(3);
-        $alt02 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"AYOCOBAGOJEK"}');
+        $alt02 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"KOROROSENSASIKAYA"}');
         $messageboba11 = fetch_value($alt02,'"message":"','"');
         if(strpos($alt02, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messagealt02);
