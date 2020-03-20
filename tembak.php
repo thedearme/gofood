@@ -1,7 +1,3 @@
-nih sc 2020
-
-
-
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
