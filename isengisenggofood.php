@@ -29,9 +29,9 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo "\n".color("yellow","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
-        echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
+        echo "\n".color("nevy","?] Mau Redeem Voucher?: yo/ora ");
         $pilihan = trim(fgets(STDIN));
-        if($pilihan == "y" || $pilihan == "Y"){
+        if($pilihan == "yo" || $pilihan == "YO"){
         echo color("red","===========(REDEEM VOUCHER)===========");
         echo "\n".color("yellow","!] voc GORIDE 8K");
         echo "\n".color("yellow","!] Enteni Sek ");
@@ -71,7 +71,7 @@ function change(){
         echo "\n".color("red","-] Message: ".$message);
         }
         gofood:
-        echo "\n".color("green","!] Claim voc GOCAR 14K");
+        echo "\n".color("green","!] voc GOCAR 14K");
         echo "\n".color("blue","!] Enteni Sek ");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -110,9 +110,9 @@ function change(){
          setpin:
          echo "\n".color("nevy","?] Sido Pasang pin?: yo/ora ");
          $pilih1 = trim(fgets(STDIN));
-         if($pilih1 == "y" || $pilih1 == "YO"){
+         if($pilih1 == "yo" || $pilih1 == "YO"){
          //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("red","========( PIN ANDA = Tempikk.... )========")."\n";
+         echo color("red","========( PIN ANDA = Kepo ya :v .... )========")."\n";
          $data2 = '{"pin":"190396"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "Otp set pin: ";
