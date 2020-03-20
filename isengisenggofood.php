@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("blue","[X]             ANGGA ROY S          [X]\n");
-echo color("nevy","[X]          IsengIsengGofood          [X]\n");
+echo color("red","[X]          IsengIsengGofood          [X]\n");
 echo colorz("red","[X]        Gojek Pasti Ada Cuan           [X]\n");
 echo color("yellow","[X] Jam  : ".date('[d-md-Y] [H:i:s]')."  [X]\n");
 echo color("green","[X] Nomor Pakai 62  [x]\n");
