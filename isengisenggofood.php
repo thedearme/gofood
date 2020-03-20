@@ -46,7 +46,7 @@ function change(){
         echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(20);
+        sleep(25);
         }
         sleep(3);
         $alt01 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
