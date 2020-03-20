@@ -1,12 +1,16 @@
+nih sc 2020
+
+
+
 <?php
-date_default_timezone_set('Kota Semarang');
+date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
 echo color("yellow","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
-echo color("green","          waiting proses.....           \n");
-echo color("yellow","[•] Nulise ngne mpekk 62xxxxxxxxxx \n");
+echo color("yellow","[•]              waiting proses.....           \n");
+echo color("yellow","[•] cara menulis nomor pakai 62xxxxxxxxxx \n");
 echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
-func#800060tion change(){
+function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
@@ -54,7 +58,7 @@ func#800060tion change(){
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
         $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Berhasil')){
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
         goto gofood;
         }else{
@@ -63,7 +67,7 @@ func#800060tion change(){
         $data = '{"referral_code":"G-75SR565"}';    
         $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
         $message = fetch_value($claim,'"message":"','"');
-        if(strpos($claim, 'Berhasil')){
+        if(strpos($claim, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
         goto gofood;
         }else{
@@ -78,11 +82,11 @@ func#800060tion change(){
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOCAR14"}');
         $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Durung Jodone')){
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
         sleep(1);
         sleep(3);
-        $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
+        $cekvoucher = request('/gopoints/v3/wallet/hers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
@@ -109,7 +113,7 @@ func#800060tion change(){
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
          echo color("red","========( PIN ANDA = KEPO DEHH.... )========")."\n";
-         $data2 = '{"pin":"190396"}';
+         $data2 = '{"pin":"192211"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "Otp set pin: ";
          $otpsetpin = trim(fgets(STDIN));
