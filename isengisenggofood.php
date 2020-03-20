@@ -54,7 +54,7 @@ function change(){
         $messagealt01 = fetch_value($alt01,'"message":"','"');
         if(strpos($alt01, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messagealt01);
-        goto gofood;
+        goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$messagealt01);
         echo "\n".color("yellow","!] Claim voc AYOCOBAGOJEK");
