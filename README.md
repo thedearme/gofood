@@ -1,7 +1,4 @@
-#voucher gojek claim voucher terbaru
-
-
-voucher go food dan Go ride
+#
 
 kode perintah
 pkg update
@@ -20,6 +17,6 @@ git clone https://github.com/thedearme/gofood
 lalu masukan kode perintah untuk menjalankan script , kode ini untuk daftar dan claim voucher go food gojek
 cd gofood
 
-php tembak.php
+php gojek.php
 
 
