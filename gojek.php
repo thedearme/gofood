@@ -37,7 +37,7 @@ function change(){
         echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(20);
+        sleep(7);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -50,7 +50,7 @@ function change(){
         echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(1);
+        sleep(7);
         }
         sleep(3);
         $alt01 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420B"}');
@@ -64,7 +64,7 @@ function change(){
         echo "\n".color("blue","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(1);
+        sleep(5);
         }
         sleep(3);
         $alt02 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
@@ -79,7 +79,7 @@ function change(){
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(1);
+        sleep(5);
         }
         sleep(3);
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"HEPILAINHATI"}');
