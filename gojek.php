@@ -1,4 +1,4 @@
-<?hp
+<?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("red"," ===NOT SAFE FOR WORK IF 02===\n");
