@@ -33,41 +33,41 @@ function change(){
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] Klem Go Ride");
+        echo "\n".color("yellow","!] Gofood 5+10+15");
         echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(9);
+        sleep(19);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAINGORIDE"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$message);
-        echo "\n".color("yellow","!] Klem 5+10+15");
+        echo "\n".color("yellow","!] Klem Gofood 10+10+10");
         echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(15);
         }
         sleep(9);
-        $alt01 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
+        $alt01 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420B"}');
         $messagealt01 = fetch_value($alt01,'"message":"','"');
         if(strpos($alt01, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messagealt01);
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$messagealt01);
-        echo "\n".color("yellow","!] Klem 10+10+10");
+        echo "\n".color("yellow","!] Gofood 5+10+15");
         echo "\n".color("blue","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(15);
         }
         sleep(5);
-        $alt02 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420B"}');
+        $alt02 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
         $messageboba11 = fetch_value($alt02,'"message":"','"');
         if(strpos($alt02, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messagealt02);
@@ -75,14 +75,14 @@ function change(){
         }else{
         echo "\n".color("green","+] Message: ".$messagealt02);
         goride:
-        echo "\n".color("yellow","!] Klem 5+10+15");
+        echo "\n".color("yellow","!] Klem 10+10+10");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(17);
         }
         sleep(5);
-        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
+        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420B"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
         sleep(3);
