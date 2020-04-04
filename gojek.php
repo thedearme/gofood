@@ -1,4 +1,4 @@
-<?php
+<?hp
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("red"," ===NOT SAFE FOR WORK IF 02===\n");
@@ -13,7 +13,7 @@ function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","(•) Nomor : ");
+        echo color("yellow","(•) Nomor : ");
         $no = trim(fgets(STDIN));
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
@@ -37,7 +37,7 @@ function change(){
         echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(9);
+        sleep(15);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -92,15 +92,24 @@ function change(){
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
         $voucher2 = getStr1('"title":"','",',$cekvoucher,"2");
         $voucher4 = getStr1('"title":"','",',$cekvoucher,"4");
+        $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
+        $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
+        $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
         echo "\n".color("green","!] Total voucher ".$total." : ");
         echo color("yellow","                         1. ".$voucher1);
         echo "\n".color("green","                     2. ".$voucher2);
         echo "\n".color("blue","                     3. ".$voucher3);
         echo "\n".color("red","                     4. ".$voucher4);
+        echo "\n".color("blue","                     5. ".$voucher5);
+        echo "\n".color("red","                     6. ".$voucher6);
+        echo "\n".color("yellow","                     7. ".$voucher7);
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
         $expired3 = getStr1('"expiry_date":"','"',$cekvoucher,'3');
         $expired4 = getStr1('"expiry_date":"','"',$cekvoucher,'4');
+        $expired5 = getStr1('"expiry_date":"','"',$cekvoucher,'5');
+        $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
+        $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
          setpin:
          echo "\n".color("nevy","?] SET PIN SISAN ?: y/n ");
          $pilih1 = trim(fgets(STDIN));
