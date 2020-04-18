@@ -88,10 +88,10 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo color("yellow"," Berhasil mendaftar\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
-        echo color("white","+] Your access token : ".$token."\n\n");
+        echo color("blue","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
         echo color("green","\n▬▬▬▬▬▬▬▬▬▬▬▬AUTO REDEEM▬▬▬▬▬▬▬▬▬▬▬▬");
-        echo "\n".color("white","Claim Voc CENTURY");
+        echo "\n".color("red","Claim Voc CENTURY");
         echo "\n".color("yellow"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -105,33 +105,33 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         }else{
         echo "\n".color("red"," Message: ".$message);
 	gocar:
-        echo "\n".color("white"," Claim voc A ");
+        echo "\n".color("blue"," Claim voc A ");
         echo "\n".color("yellow"," Please wait");
         for($a=1;$a<=3;$a++){
-        echo color("yellow",".");
+        echo color("red",".");
         sleep(20);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD160420A"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green"," Message: ".$message);
-        goto gofood;
+        goto goride;
         }else{
         echo "\n".color("green"," Message: ".$message);
         gofood:
-        echo "\n".color("white"," Claim voc EATLAH");
+        echo "\n".color("red"," Claim voc EATLAH");
         echo "\n".color("yellow"," Please wait");
         for($a=1;$a<=3;$a++){
-        echo color("white",".");
+        echo color("blue",".");
         sleep(3);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EATLAH"}');
         $message = fetch_value($code1,'"message":"','"');
         echo "\n".color("green"," Message: ".$message);
-        echo "\n".color("white"," Claim voc B");
+        echo "\n".color("red"," Claim voc B");
         echo "\n".color("yellow"," Please wait");
         for($a=1;$a<=3;$a++){
-        echo color("white",".");
+        echo color("green",".");
         sleep(1);
         }
         sleep(3);
